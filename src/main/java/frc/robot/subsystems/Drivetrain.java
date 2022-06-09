@@ -11,9 +11,9 @@ import com.ctre.phoenix.motorcontrol.FollowerType;
 import com.ctre.phoenix.motorcontrol.InvertType;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.SupplyCurrentLimitConfiguration;
-import com.ctre.phoenix.motorcontrol.can.TalonFX;
+// import com.ctre.phoenix.motorcontrol.can.TalonFX;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX; // tyr
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX; 
+// import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX; 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX; // tyr
 
 import edu.wpi.first.wpilibj.AnalogGyro;
@@ -57,7 +57,6 @@ import edu.wpi.first.wpilibj.ADXRS450_Gyro;
    * DrivetrainSubsystem handles all subsystem level logic for the drivetrain.
    * Possibly also Ramsete idfk I haven't finished this class yet.
    */
-import frc.robot.subsystems.Pigeon;
 
 public class Drivetrain extends SubsystemBase {
 
