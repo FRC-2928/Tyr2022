@@ -25,8 +25,15 @@ import frc.robot.Constants.OIConstants;
 
 import frc.robot.oi.DriverOI;
 import frc.robot.oi.OperatorOI;
+
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Transmission;
+import frc.robot.subsystems.Lifter;
+import frc.robot.subsystems.ShooterMotors;
+import frc.robot.subsystems.ShooterSolenoid;
+import frc.robot.subsystems.Spinner;
+import frc.robot.subsystems.Tomahawk;
+
 import frc.robot.commands.DrivetrainCommands.DriveDistanceProfiled;
 import frc.robot.commands.DrivetrainCommands.RunRamseteTrajectory;
 
@@ -35,11 +42,11 @@ public class RobotContainer {
   // The Robot's Subsystems
   private final Transmission m_transmission = new Transmission();
   private final Drivetrain m_drivetrain = new Drivetrain(m_transmission::getGearState);
-  // private final Pigeon m_pigeon = new Pigeon();
-  // private final Turret m_turret = new Turret(m_drivetrain);
-  // private final Intake m_intake = new Intake(DriverStation.getAlliance());
-  // private final Flywheel m_flywheel = new Flywheel();
-  // private final Climber m_climber = new Climber();
+  private final Lifter m_lifter = new Lifter();
+  private final ShooterMotors m_shooterMotors = new ShooterMotors();
+  private final ShooterSolenoid m_shooterSolenoid = new ShooterSolenoid();
+  private final Spinner m_spinner = new Spinner();
+  private final Tomahawk m_tomahawk = new Tomahawk();
   
 
   // XBox Controllers
