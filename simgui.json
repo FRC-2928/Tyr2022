@@ -1,0 +1,27 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Drivetrain": "Subsystem",
+      "/LiveWindow/Lifter": "Subsystem",
+      "/LiveWindow/ShooterMotors": "Subsystem",
+      "/LiveWindow/ShooterSolenoid": "Subsystem",
+      "/LiveWindow/Spinner": "Subsystem",
+      "/LiveWindow/Tomahawk": "Subsystem",
+      "/LiveWindow/Transmission": "Subsystem",
+      "/LiveWindow/Ungrouped/ADXRS450_Gyro[0]": "Gyro",
+      "/LiveWindow/Ungrouped/DifferentialDrive[1]": "DifferentialDrive",
+      "/LiveWindow/Ungrouped/PIDController[1]": "PIDController",
+      "/LiveWindow/Ungrouped/PIDController[2]": "PIDController",
+      "/LiveWindow/Ungrouped/PWMTalonSRX[0]": "Motor Controller",
+      "/LiveWindow/Ungrouped/PWMTalonSRX[1]": "Motor Controller",
+      "/LiveWindow/Ungrouped/PWMTalonSRX[2]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/LiveWindow/Ungrouped/Talon SRX [14]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Talon SRX [1]": "Motor Controller",
+      "/LiveWindow/Ungrouped/Talon SRX [4]": "Motor Controller",
+      "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/SendableChooser[0]": "String Chooser"
+    }
+  }
+}
