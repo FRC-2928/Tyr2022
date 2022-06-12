@@ -36,6 +36,13 @@ import frc.robot.subsystems.Tomahawk;
 
 import frc.robot.commands.DrivetrainCommands.DriveDistanceProfiled;
 import frc.robot.commands.DrivetrainCommands.RunRamseteTrajectory;
+import frc.robot.commands.RaiseShooterCommand;
+import frc.robot.commands.LowerShooterCommand;
+import frc.robot.commands.IntakeCommand;
+import frc.robot.commands.OuttakeCommand;
+import frc.robot.commands.SpinnerCommand;
+import frc.robot.commands.ShootCommand;
+import frc.robot.commands.TomahawkCommand;
 
 public class RobotContainer {
 
@@ -66,6 +73,16 @@ public class RobotContainer {
     SmartDashboard.putData(m_autoChooser);  
     
     // Configure default commands, button bindings, and shuffleboard
+    m_driverOI.getRaiseShooter().whileHeld(new RaiseShooterCommand(m_lifter)); //right bumper
+    m_driverOI.getLowerShooter().whileHeld(new LowerShooterCommand(m_lifter)); //left bumper
+    m_driverOI.getIntake().whileHeld(new IntakeCommand(m_shooterMotors)); //A
+    m_driverOI.getOuttake().whileHeld(new OuttakeCommand(m_shooterMotors)); //B
+    m_driverOI.getSpinner().whileHeld(new SpinnerCommand(m_spinner)); //start 
+    m_driverOI.getShoot().whileHeld(new ShootCommand(m_shooterSolenoid)); // Back
+
+    m_driverOI.getLowerTomahawk().whenPressed(new TomahawkCommand(m_tomahawk,false)); // right stick
+    m_driverOI.getRaiseTomahawk().whenPressed(new TomahawkCommand(m_tomahawk,true)); // left stick
+
     configureSubsystems();
     
   }
@@ -192,6 +209,9 @@ public class RobotContainer {
     // m_operatorOI.getRetractClimber().whileHeld(new RetractClimberBars(m_climber));
     // m_operatorOI.getTiltForward().whenPressed(new InstantCommand(m_climber::tiltForward,m_climber));
     // m_operatorOI.getTiltBack().whenPressed(new InstantCommand(m_climber::tiltBack,m_climber));
+
+    
+
   }
 
 
