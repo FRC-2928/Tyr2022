@@ -15,6 +15,7 @@ public class Lifter extends SubsystemBase {
 	public static int lifterMotor = 4;
 	public Lifter() {
 		this.motor = new WPI_TalonSRX(lifterMotor);
+		motor.setSelectedSensorPosition(0);
 	}
 
 	// public Lifter(String name) {
@@ -24,17 +25,17 @@ public class Lifter extends SubsystemBase {
 	
 	public void Raise()
 	{
-		this.motor.set(.85);
+		this.motor.set(.5);
 	}
 	
 	public void Lower()
 	{
-		this.motor.set(-.85);
+		this.motor.set(-.5);
 	}
 	
 	public void RunAtSpeed(float speed)
 	{
-		if (speed > .85 || speed < -.85)
+		if (speed > .5 || speed < -.5)
 		{
 			this.motor.set(0);
 			return;
@@ -45,11 +46,11 @@ public class Lifter extends SubsystemBase {
 	{
 		this.motor.set(0);
 	}
-	public int lifterPos()
+	public double lifterPos()
 	{
-		// return motor.getEncPosition();
-		System.out.println(">>>>>>Lifter SRX POSITION TBD !!!!!");
-		return 0;
+		return motor.getSelectedSensorPosition();
+		// System.out.println(">>>>>>Lifter SRX POSITION TBD !!!!!");
+		// return 0;
 	}
 	// @Override
 	// protected void initDefaultCommand() {

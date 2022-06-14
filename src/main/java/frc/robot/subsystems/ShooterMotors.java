@@ -14,8 +14,8 @@ public class ShooterMotors extends SubsystemBase {
 		this.rightShoot = new PWMTalonSRX(rightShootMotor);
 	}
 	public void Outtake() {
-		leftShoot.set(.85);
-		rightShoot.set(.85);
+		leftShoot.set(1.0);
+		rightShoot.set(1.0);
 	}
 	
 	
