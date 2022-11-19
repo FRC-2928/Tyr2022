@@ -13,7 +13,7 @@ public class Spinner extends SubsystemBase {
 
 	public void On()
 	{
-		this.motor.set(-0.40);
+		this.motor.set(-0.60);
 	}
 	
 	public void Off()
